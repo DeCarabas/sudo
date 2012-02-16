@@ -1,6 +1,7 @@
 ﻿namespace sudo
 {
     using System;
+    using sudo.Server;
 
     static class Program
     {
@@ -32,7 +33,7 @@
                     //
                     Tracer.Source = "sudo server";
                     reportErrors = false;                    
-                    Server.Run();
+                    SudoServer.Run();
                 }
                 else if (args[0] == "-Exec")
                 {

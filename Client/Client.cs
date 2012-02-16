@@ -7,6 +7,7 @@
     using System.IO.Pipes;
     using System.Reflection;
     using System.Security.Principal;
+    using sudo.Protocol;
 
     static class Client
     {
@@ -38,7 +39,7 @@
             {
                 var client = new NamedPipeClientStream(
                     ".",
-                    Server.PipeName,
+                    ProtocolConstants.PipeName,
                     PipeDirection.InOut,
                     PipeOptions.None,
                     TokenImpersonationLevel.Identification);
@@ -92,8 +93,6 @@
                 request.Write(writer);
                 writer.Flush();
                 stream.Flush();
-
-
 
                 var response = Int32.Parse(reader.ReadLine());
                 var message = reader.ReadLine();

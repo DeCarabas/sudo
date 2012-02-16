@@ -71,19 +71,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client.cs" />
+    <Compile Include="Client\Client.cs" />
     <Compile Include="FlushingWriter.cs" />
+    <Compile Include="Protocol\ProtocolConstants.cs" />
+    <Compile Include="Protocol\ExecuteResponse.cs" />
     <Compile Include="SimpleFileStream.cs" />
     <Compile Include="Tracer.cs" />
-    <Compile Include="ExecuteRequest.cs" />
+    <Compile Include="Protocol\ExecuteRequest.cs" />
     <Compile Include="NativeMethods.cs" />
-    <Compile Include="Executor.cs" />
+    <Compile Include="Executor\Executor.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Server.cs" />
+    <Compile Include="Server\SudoServer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
